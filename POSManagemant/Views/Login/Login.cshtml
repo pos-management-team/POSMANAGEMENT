@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/jquery-3.0.0.min.js"></script>
+<script src="~/Apps/app.js"></script>
+<script src="~/Apps/JSController/LoginController.js"></script>
+<script src="~/Apps/JSService/LoginService.js"></script>
+
+<div class="container" ng-app="POSManagement" ng-controller="LoginController">
+    <div class="row">
+        <div class="col-md-12">
+            <label id="lblUserName">User Name</label>
+            <input id="txtUserName" ng-model="obj.UserName" type="text" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <label id="lblPassword">Password</label>
+            <input id="txtPassword" ng-model="obj.Password" type="password" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <button type="button" value="Login" ng-click="login(obj.UserName,obj.Password)">Login</button>
+        </div>
+    </div>
+</div>

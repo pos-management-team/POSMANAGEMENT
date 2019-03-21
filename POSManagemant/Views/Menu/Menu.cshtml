@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "Menu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background-color:gray;
+        height: 530px;
+    }
+
+    li a {
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+        /* Change the link color on hover */
+        li a:hover {
+            background-color: #555;
+            color: white;
+        }
+
+    .bodyColor {
+        background-color: #555;
+    }
+</style>
+
+
+
+@*<script src="~/Apps/Myfolder/app.js"></script>*@
+<script src="~/Apps/JSControllers/MenuController.js"></script>
+<script src="~/Apps/JSServices/MenuService.js"></script>
+
+<div class="bodyColor" ng-app="Pharmacy" ng-controller="MenuController">
+
+    <div class="col-lg-12 col-md-12 col-sm-12" style="background-color: #555">
+        <div>
+            <div class="panel" style="background-color: #E17D7D">
+                <div class="panel-heading panel-heading-01">
+                    <i class="fa fa-edit fa-fw icon-padding"></i>Menu Page
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+
+                <ul style="cursor: pointer">
+                    <li><a ng-click="Setup_Click()">Setup</a></li>
+                    <li><a ng-click="Transaction_Click()">Transaction</a></li>
+                    <li><a ng-click="Report_Click()">Report</a></li>
+                   
+                </ul>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9">
+                <div style="border: 2px solid #E17D7D; border-radius: 5px;height:544px; background-color:white">
+                    <div style="margin:20px">
+                        <div ng-repeat="P in Pages">
+                           
+                            <a id="ini_rc_setupT" href="/{{P.Form_Type}}/{{P.Form_Name}}">{{P.Name}}</a>
+                           
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
