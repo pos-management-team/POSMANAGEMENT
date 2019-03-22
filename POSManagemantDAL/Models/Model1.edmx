@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="POS_Management_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="POS_Management_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="T00000">
           <Key>
             <PropertyRef Name="T_LOGING_ID" />
@@ -26,7 +26,7 @@
           <Property Name="T_FORM_TYPE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="T_FORM_TYPE" Type="varchar" MaxLength="20" />
           <Property Name="T_FORM_NAME" Type="varchar" MaxLength="10" />
-          <Property Name="T_NAME" Type="varchar" MaxLength="5" />
+          <Property Name="T_NAME" Type="varchar" MaxLength="100" />
           <Property Name="T_ENTRY_USER" Type="varchar" MaxLength="5" />
           <Property Name="T_ENTRY_DATE" Type="datetime" />
           <Property Name="T_UPDATE_USER" Type="varchar" MaxLength="5" />
@@ -37,7 +37,7 @@
             <PropertyRef Name="T_COMPANY_ID" />
           </Key>
           <Property Name="T_COMPANY_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="T_COMPANY_NAME" Type="varchar" MaxLength="50" />
+          <Property Name="T_COMPANY_NAME" Type="varchar" MaxLength="100" />
           <Property Name="T_COMPANY_TYPE" Type="varchar" MaxLength="4" />
           <Property Name="T_ENTRY_USER" Type="varchar" MaxLength="5" />
           <Property Name="T_ENTRY_DATE" Type="datetime" />
@@ -49,7 +49,7 @@
             <PropertyRef Name="T_PRODUCT_TYPE_ID" />
           </Key>
           <Property Name="T_PRODUCT_TYPE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="T_PRODUCT_TYPE_NAME" Type="varchar" MaxLength="50" />
+          <Property Name="T_PRODUCT_TYPE_NAME" Type="varchar" MaxLength="100" />
           <Property Name="T_ENTRY_USER" Type="varchar" MaxLength="5" />
           <Property Name="T_ENTRY_DATE" Type="datetime" />
           <Property Name="T_UPDATE_USER" Type="varchar" MaxLength="5" />
@@ -60,7 +60,7 @@
             <PropertyRef Name="T_PRODUCT_ID" />
           </Key>
           <Property Name="T_PRODUCT_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="T_PRODUCT_NAME" Type="varchar" MaxLength="50" />
+          <Property Name="T_PRODUCT_NAME" Type="varchar" MaxLength="100" />
           <Property Name="T_PRODUCT_TYPE_ID" Type="int" />
           <Property Name="T_COMPANY_ID" Type="int" />
           <Property Name="T_ENTRY_USER" Type="varchar" MaxLength="5" />
@@ -73,7 +73,7 @@
             <PropertyRef Name="T_PACK_ID" />
           </Key>
           <Property Name="T_PACK_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="T_PACK_NAME" Type="varchar" MaxLength="50" />
+          <Property Name="T_PACK_NAME" Type="varchar" MaxLength="100" />
           <Property Name="T_PACK_QUANTITY" Type="decimal" Precision="10" Scale="2" />
           <Property Name="T_ENTRY_USER" Type="varchar" MaxLength="5" />
           <Property Name="T_ENTRY_DATE" Type="datetime" />
@@ -172,8 +172,7 @@
           <EntitySet Name="T14003" EntityType="Self.T14003" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="T14004" EntityType="Self.T14004" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="POS_Management_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -198,7 +197,7 @@
           <Property Name="T_FORM_TYPE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="T_FORM_TYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="T_FORM_NAME" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="T_NAME" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="T_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="T_ENTRY_USER" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
           <Property Name="T_ENTRY_DATE" Type="DateTime" Precision="3" />
           <Property Name="T_UPDATE_USER" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
@@ -209,7 +208,7 @@
             <PropertyRef Name="T_COMPANY_ID" />
           </Key>
           <Property Name="T_COMPANY_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="T_COMPANY_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="T_COMPANY_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="T_COMPANY_TYPE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
           <Property Name="T_ENTRY_USER" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
           <Property Name="T_ENTRY_DATE" Type="DateTime" Precision="3" />
@@ -221,7 +220,7 @@
             <PropertyRef Name="T_PRODUCT_TYPE_ID" />
           </Key>
           <Property Name="T_PRODUCT_TYPE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="T_PRODUCT_TYPE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="T_PRODUCT_TYPE_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="T_ENTRY_USER" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
           <Property Name="T_ENTRY_DATE" Type="DateTime" Precision="3" />
           <Property Name="T_UPDATE_USER" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
@@ -232,7 +231,7 @@
             <PropertyRef Name="T_PRODUCT_ID" />
           </Key>
           <Property Name="T_PRODUCT_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="T_PRODUCT_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="T_PRODUCT_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="T_PRODUCT_TYPE_ID" Type="Int32" />
           <Property Name="T_COMPANY_ID" Type="Int32" />
           <Property Name="T_ENTRY_USER" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
@@ -245,7 +244,7 @@
             <PropertyRef Name="T_PACK_ID" />
           </Key>
           <Property Name="T_PACK_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="T_PACK_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="T_PACK_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="T_PACK_QUANTITY" Type="Decimal" Precision="10" Scale="2" />
           <Property Name="T_ENTRY_USER" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
           <Property Name="T_ENTRY_DATE" Type="DateTime" Precision="3" />
