@@ -9,22 +9,89 @@
 <script src="~/Apps/JSController/LoginController.js"></script>
 <script src="~/Apps/JSService/LoginService.js"></script>
 
+<!--===============================================================================================-->	
+<link rel="icon" type="image/png" href="/Images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="/Content/bootstrap.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="/Content/animate/animate.css">
+<!--===============================================================================================-->	
+<link rel="stylesheet" type="text/css" href="/Content/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="/Content/select2/select2.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="/Content/util.css">
+<link rel="stylesheet" type="text/css" href="/Content/main.css">
+<!--===============================================================================================-->
+
 <div class="container" ng-app="POSManagement" ng-controller="LoginController">
-    <div class="row">
-        <div class="col-md-12">
-            <label id="lblUserName">User Name</label>
-            <input id="txtUserName" ng-model="obj.UserName" type="text" />
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-pic js-tilt" data-tilt>
+                    <img src="/Images/img-01.png" alt="IMG">
+                </div>
+
+                <form class="login100-form validate-form">
+                    <span class="login100-form-title">
+                        Member Login
+                    </span>
+
+                    <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                        <input class="input100" type="text" name="email" ng-model="obj.userid" placeholder="User id">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate = "Password is required">
+                        <input class="input100" type="password" name="pass" ng-model="obj.password" placeholder="Password">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
+                    </div>
+					
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn" ng-click="login(obj.userid,obj.password)">Login</button>
+                    </div>
+
+                    <div class="text-center p-t-12">
+                        <span class="txt1">Forgot</span><a class="txt2" href="#">Username / Password?</a>
+                    </div>
+
+                    @*<div class="text-center p-t-136">
+                        <a class="txt2" href="#">
+                            Create your Account
+                            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+                        </a>
+                    </div>*@
+                </form>
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-12">
-            <label id="lblPassword">Password</label>
-            <input id="txtPassword" ng-model="obj.Password" type="password" />
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <button type="button" value="Login" ng-click="login(obj.UserName,obj.Password)">Login</button>
-        </div>
-    </div>
+	
+	
+
+	
+    <!--===============================================================================================-->	
+    <script src="/Scripts/jquery-3.0.0.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="/Scripts/popper.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="/Content/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="/Content/tilt/tilt.jquery.min.js"></script>
+    <script >
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+    <!--===============================================================================================-->
+    @*<script src="/Scripts/main.js"></script>*@
+
 </div>
